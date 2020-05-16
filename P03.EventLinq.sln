@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.EventLinq", "P03.EventLinq\P03.EventLinq.csproj", "{31C0947E-5486-4AB3-A644-08DC5DF1A588}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.Interface", "P03.Interface\P03.Interface.csproj", "{8A477A96-6B9A-40C3-8015-F4FD4A257816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.Utility", "P03.Utility\P03.Utility.csproj", "{298AD1D2-EF66-4951-B5CA-94CBA93E984B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{31C0947E-5486-4AB3-A644-08DC5DF1A588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31C0947E-5486-4AB3-A644-08DC5DF1A588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31C0947E-5486-4AB3-A644-08DC5DF1A588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A477A96-6B9A-40C3-8015-F4FD4A257816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A477A96-6B9A-40C3-8015-F4FD4A257816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A477A96-6B9A-40C3-8015-F4FD4A257816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A477A96-6B9A-40C3-8015-F4FD4A257816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{298AD1D2-EF66-4951-B5CA-94CBA93E984B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298AD1D2-EF66-4951-B5CA-94CBA93E984B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298AD1D2-EF66-4951-B5CA-94CBA93E984B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298AD1D2-EF66-4951-B5CA-94CBA93E984B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
