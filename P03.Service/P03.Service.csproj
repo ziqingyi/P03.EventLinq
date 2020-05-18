@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8A477A96-6B9A-40C3-8015-F4FD4A257816}</ProjectGuid>
+    <ProjectGuid>{B7A36199-1917-4F63-8FC9-DB04DE1A7A97}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>P03.Interface</RootNamespace>
-    <AssemblyName>P03.Interface</AssemblyName>
+    <RootNamespace>P03.Service</RootNamespace>
+    <AssemblyName>P03.Service</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractPerform.cs" />
-    <Compile Include="InterfacePerform.cs" />
+    <Compile Include="CenterPerform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\P03.Utility\P03.Utility.csproj">
-      <Project>{298AD1D2-EF66-4951-B5CA-94CBA93E984B}</Project>
-      <Name>P03.Utility</Name>
+    <ProjectReference Include="..\P03.Interface\P03.Interface.csproj">
+      <Project>{8A477A96-6B9A-40C3-8015-F4FD4A257816}</Project>
+      <Name>P03.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

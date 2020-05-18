@@ -22,15 +22,15 @@ namespace P03.Interface
         }
 
         public abstract void DogCall();
-        public abstract void PeopleCall();
+        public abstract void PeopleCry();
         public abstract void WindCall();
 
-        public virtual void BeginSpeak()
+        public virtual void OpeningRemarks()
         {
             Console.WriteLine("performance begin ....");
         }
 
-        public virtual void EndSpeak()
+        public virtual void ClosingRemark()
         {
             Console.WriteLine("performance finished, see you...");
         }
