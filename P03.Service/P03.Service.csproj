@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CenterPerform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SouthPerform.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
