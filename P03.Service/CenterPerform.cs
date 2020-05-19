@@ -13,16 +13,8 @@ namespace P03.Service
         public string CenterSkillProperty { get; set; }
         public string CenterSkillField;
 
-        protected override void ShowSkills()
-        {
-            CenterUniqueWay();
-        }
-
-        public void CenterUniqueWay()
-        {
-            Console.WriteLine("Center exclusive skills .........");
-        }
-
+        //override abstract method from abstract class
+        
         public override void DogCall()
         {
             Console.WriteLine("center perform dog call");
@@ -37,11 +29,23 @@ namespace P03.Service
         {
             Console.WriteLine("center perform wind call");
         }
+        protected override void ShowSkills()
+        {
+            CenterUniqueWay();
+        }
 
+        public void CenterUniqueWay()
+        {
+            Console.WriteLine("Center exclusive skills .........");
+        }
+        //implement method from interface
         public void Charge()
         {
             Console.WriteLine("center charge ");
         }
+
+
+        #region  event
 
         public event Action BeginShowEvent;
         public event Action ShowingEvent;
@@ -49,17 +53,13 @@ namespace P03.Service
 
         public void Show()
         {
-            this.Start();
-            this.OpeningRemarks();
-            BeginShowEvent?.Invoke();
-            this.DogCall();
-            this.PeopleCry();
-            this.WindCall();
-            this.ShowSkills();
-            ShowingEvent?.Invoke();
-            this.ClosingRemark();
-            this.Charge();
-            EndShowEvent?.Invoke();
+          
         }
+
+
+
+        #endregion
+
+
     }
 }

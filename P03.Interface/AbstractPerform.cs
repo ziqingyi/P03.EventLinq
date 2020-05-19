@@ -72,22 +72,7 @@ namespace P03.Interface
             return temperature >= this.HighTemperature;
         }
 
-
-
-
-
         #endregion
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

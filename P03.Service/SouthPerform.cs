@@ -12,14 +12,8 @@ namespace P03.Service
         public string SouthSkillProperty { get; set; }
         public string SouthSkillField;
 
-        protected override void ShowSkills()
-        {
-            this.SouthUniqueWay();
-        }
-        public void SouthUniqueWay()
-        {
-            Console.WriteLine("Center exclusive skills .........");
-        }
+        //override abstract method from abstract class
+
         public override void DogCall()
         {
             Console.WriteLine("South perform dog call");
@@ -32,19 +26,37 @@ namespace P03.Service
         {
             Console.WriteLine("South perform wind call");
         }
+        protected override void ShowSkills()
+        {
+            this.SouthUniqueWay();
+        }
+        public void SouthUniqueWay()
+        {
+            Console.WriteLine("Center exclusive skills .........");
+        }
+        // override virtual method from abstract class
         public override void OpeningRemarks()
         {
             Console.WriteLine("South perform will begin now");
         }
+        //implement method from interface
         public void Charge()
         {
             Console.WriteLine("center charge ");
         }
 
+
+        #region  event
         public void FireStart(object send, EventArgs args)
         {
 
         }
+
+
+
+
+        #endregion
+
 
     }
 }
