@@ -35,7 +35,7 @@ namespace P03.Service
             Console.WriteLine("Center exclusive skills .........");
         }
         // override virtual method from abstract class
-        public override void OpeningRemarks()
+        public override void OpeningRemark()
         {
             Console.WriteLine("South perform will begin now");
         }

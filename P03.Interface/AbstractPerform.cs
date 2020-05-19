@@ -25,7 +25,7 @@ namespace P03.Interface
         public abstract void PeopleCry();
         public abstract void WindCall();
 
-        public virtual void OpeningRemarks()
+        public virtual void OpeningRemark()
         {
             Console.WriteLine("performance begin ....");
         }

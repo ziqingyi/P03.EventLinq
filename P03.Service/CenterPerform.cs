@@ -38,6 +38,8 @@ namespace P03.Service
         {
             Console.WriteLine("Center exclusive skills .........");
         }
+        //no override of virtual method from abstract class
+
         //implement method from interface
         public void Charge()
         {
