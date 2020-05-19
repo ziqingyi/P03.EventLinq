@@ -42,7 +42,11 @@ namespace P03.Service
         {
             Console.WriteLine("performance finished, see you...");
         }
-
+        // implement method from interface
+        public void Charge()
+        {
+            Console.WriteLine("West charge ");
+        }
 
 
         #region event
