@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CenterPerform.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="EastPerform.cs" />
     <Compile Include="NorthPerform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
