@@ -10,7 +10,7 @@ namespace P03.EventLinq
     {
         static void Main(string[] args)
         {
-
+            ShowPerformAttr.Show();
 
 
         }

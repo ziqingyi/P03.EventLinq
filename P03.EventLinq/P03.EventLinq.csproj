@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyManager.cs" />
+    <Compile Include="ShowPerformAttr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -54,6 +55,10 @@
     <ProjectReference Include="..\P03.Interface\P03.Interface.csproj">
       <Project>{8A477A96-6B9A-40C3-8015-F4FD4A257816}</Project>
       <Name>P03.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\P03.Service\P03.Service.csproj">
+      <Project>{B7A36199-1917-4F63-8FC9-DB04DE1A7A97}</Project>
+      <Name>P03.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
