@@ -30,7 +30,7 @@ namespace P03.EventLinq
             n1.DogCall();
             n1.PeopleCry();
             n1.WindCall();
-            n1.Show();
+            n1.Show();// this will call Show method in abstract class. 
             n1.ClosingRemark();
             n1.Charge();
 

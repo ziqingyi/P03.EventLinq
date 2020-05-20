@@ -10,6 +10,7 @@ namespace P03.EventLinq
 {
     public class PropertyManager
     {
+        //can use this static instance to access no-static methods or fields. 
         public static readonly PropertyManager instance = new PropertyManager();
 
         public static void ShowPropertyFields<T>(T t) where T: AbstractPerform, InterfacePerform
