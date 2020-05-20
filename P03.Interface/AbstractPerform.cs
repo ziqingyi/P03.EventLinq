@@ -27,12 +27,12 @@ namespace P03.Interface
 
         public virtual void OpeningRemark()
         {
-            Console.WriteLine("performance begin ....");
+            Console.WriteLine("abstract performance begin.....");
         }
 
         public virtual void ClosingRemark()
         {
-            Console.WriteLine("performance finished, see you...");
+            Console.WriteLine("abstract performance finished, see you...");
         }
 
         public void Show()
