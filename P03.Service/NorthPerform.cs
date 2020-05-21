@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using P03.Interface;
@@ -11,6 +13,14 @@ namespace P03.Service
     {
         public string NorthSkillProperty { get; set; }
         public string NorthSkillField;
+        //public new int HighTemperature = 1000;
+
+        //must set own temperature
+        public NorthPerform()
+        {
+            // set own temperature. 
+            this.HighTemperature = 1000;
+        }
 
         //override abstract method from abstract class
         public override void DogCall()
@@ -49,6 +59,7 @@ namespace P03.Service
 
         #region  event
 
+ 
 
 
 

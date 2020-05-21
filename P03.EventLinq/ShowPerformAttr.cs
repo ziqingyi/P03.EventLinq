@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P03.Interface;
 
 namespace P03.EventLinq
 {
@@ -22,6 +23,8 @@ namespace P03.EventLinq
                 Table = "North Table 1",
                 FireHandler = null
             };
+
+
 
             PropertyManager.ShowPropertyFields(n1);
             Console.WriteLine("-----------show North Performance---------------------");

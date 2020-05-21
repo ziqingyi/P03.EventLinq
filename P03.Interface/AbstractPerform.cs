@@ -46,7 +46,7 @@ namespace P03.Interface
 
         #region event
 
-        protected int HighTemperature = 400;
+        protected int HighTemperature = 400;//protected: only derived class can modify
         public EventHandler FireHandler;
 
         public void SetTemperature(int temperature)
@@ -59,6 +59,10 @@ namespace P03.Interface
                         HighestTemperature = this.HighTemperature
                     }
                 );
+            }
+            else
+            {
+                Console.WriteLine("normal temperature");
             }
         }
 
