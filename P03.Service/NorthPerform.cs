@@ -59,7 +59,12 @@ namespace P03.Service
 
         #region  event
 
- 
+        //override base class's way of comparing the temperature. 
+        protected override bool IsOn(int temperature)
+        {
+            Console.WriteLine("North test temperature");
+            return temperature > this.HighTemperature;
+        }
 
 
 

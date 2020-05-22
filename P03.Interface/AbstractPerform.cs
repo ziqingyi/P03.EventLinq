@@ -49,16 +49,17 @@ namespace P03.Interface
         protected int HighTemperature = 400;//protected: only derived class can modify
         public EventHandler FireHandler;
 
+        #region comparing temperature and invoke event, method 1
         public void SetTemperature(int temperature)
         {
             if (temperature >= this.HighTemperature)
             {
-                FireHandler?.Invoke(this,new FireEventArgs()
+                FireHandler?.Invoke(this, new FireEventArgs()
                     {
                         CurrentTemperature = temperature,
                         HighestTemperature = this.HighTemperature
                     }
-                );
+                );// can only invoke in current class
             }
             else
             {
@@ -66,15 +67,22 @@ namespace P03.Interface
             }
         }
 
-        protected void EventInvoke(FireEventArgs fireEventArgs)
-        {
-            FireHandler?.Invoke(this, fireEventArgs);
-        }
+        #endregion
 
+
+        #region comparing temperature and invoke event, method 2
         protected virtual bool IsOn(int temperature)
         {
             return temperature >= this.HighTemperature;
         }
+        protected void EventInvoke(FireEventArgs fireEventArgs)
+        {
+            // can only invoke in current class
+            FireHandler?.Invoke(this, fireEventArgs);
+        }
+
+        #endregion
+
 
         #endregion
 
