@@ -6,6 +6,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using P03.Interface;
+using P03.Utility;
 
 namespace P03.Service
 {
@@ -19,7 +20,7 @@ namespace P03.Service
         public NorthPerform()
         {
             // set own temperature. 
-            this.HighTemperature = 1000;
+            //this.HighTemperature = 1000;
         }
 
         //override abstract method from abstract class
@@ -60,14 +61,23 @@ namespace P03.Service
         #region  event
 
         //override base class's way of comparing the temperature. 
+        //no need to set temperature in constructor. 
         protected override bool IsOn(int temperature)
         {
             Console.WriteLine("North test temperature");
-            return temperature > this.HighTemperature;
+            return temperature > 1000;
         }
 
+        public void EventStart(object send, EventArgs args)
+        {
+            var argsTemp = (FireEventArgs) args;
+            Console.WriteLine($"north temp threshold : {argsTemp.HighestTemperature}; now is : {argsTemp.CurrentTemperature} ");
+            Action action= new Action();
 
 
+
+
+        }
 
 
 

@@ -77,7 +77,8 @@ namespace P03.Interface
         }
         protected void EventInvoke(FireEventArgs fireEventArgs)
         {
-            // can only invoke in current class
+            // can only invoke in current class,(FireHandler in abstractPerform)
+            // so build this method to be used by derived class
             FireHandler?.Invoke(this, fireEventArgs);
         }
 
