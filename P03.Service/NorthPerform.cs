@@ -72,10 +72,9 @@ namespace P03.Service
         {
             var argsTemp = (FireEventArgs) args;
             Console.WriteLine($"north temp threshold : {argsTemp.HighestTemperature}; now is : {argsTemp.CurrentTemperature} ");
-            Action action= new Action();
-
-
-
+            Action action= new Action(Customer.HusbandAction);
+            action += Customer.WifeAction;
+            action.Invoke();
 
         }
 
