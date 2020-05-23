@@ -61,6 +61,10 @@
       <Project>{B7A36199-1917-4F63-8FC9-DB04DE1A7A97}</Project>
       <Name>P03.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\P03.Utility\P03.Utility.csproj">
+      <Project>{298AD1D2-EF66-4951-B5CA-94CBA93E984B}</Project>
+      <Name>P03.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

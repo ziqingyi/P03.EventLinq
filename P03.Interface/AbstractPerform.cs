@@ -47,7 +47,7 @@ namespace P03.Interface
         #region event
 
         protected int HighTemperature = 400;//protected: only derived class can modify
-        public EventHandler FireHandler;
+        public event EventHandler FireHandler;
 
         #region comparing temperature and invoke event, method 1
         public void SetTemperature(int temperature)
@@ -68,7 +68,6 @@ namespace P03.Interface
         }
 
         #endregion
-
 
         #region comparing temperature and invoke event, method 2
         protected virtual bool IsOn(int temperature)

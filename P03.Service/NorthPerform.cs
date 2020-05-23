@@ -20,7 +20,9 @@ namespace P03.Service
         public NorthPerform()
         {
             // set own temperature. 
-            //this.HighTemperature = 1000;
+            this.HighTemperature = 1000;
+            // set own event
+            this.FireHandler += EventStart;
         }
 
         //override abstract method from abstract class
@@ -59,25 +61,25 @@ namespace P03.Service
         }
 
         #region  event
+         
 
         //override base class's way of comparing the temperature. 
         //no need to set temperature in constructor. 
         protected override bool IsOn(int temperature)
         {
             Console.WriteLine("North test temperature");
-            return temperature > 1000;
+            return temperature > this.HighTemperature;
         }
 
         public void EventStart(object send, EventArgs args)
         {
             var argsTemp = (FireEventArgs) args;
-            Console.WriteLine($"north temp threshold : {argsTemp.HighestTemperature}; now is : {argsTemp.CurrentTemperature} ");
-            Action action= new Action(Customer.HusbandAction);
-            action += Customer.WifeAction;
-            action.Invoke();
-
+            Console.WriteLine($"send by {send.ToString()}  " +
+                              $"north temp threshold : {argsTemp.HighestTemperature}; " +
+                              $"now is : {argsTemp.CurrentTemperature} ");
         }
 
+   
 
 
         #endregion
