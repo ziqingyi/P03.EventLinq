@@ -59,6 +59,17 @@ namespace P03.EventLinq
                 Table = "West Table 1",
             };
             PropertyManager.ShowPropertyFields(w1);
+            CenterPerform c1 = new CenterPerform()
+            {
+                Chair = "Center Chair 1",
+                Fan = "Center Fan 1",
+                CenterSkillField = "Center Skill Field",
+                CenterSkillProperty = "Center skill Property",
+                Person = "Center Person 1",
+                Ruler = "Center Ruler 1",
+                Table = "Center Table 1",
+            };
+            PropertyManager.ShowPropertyFields(c1);
             #endregion
 
 
@@ -128,8 +139,27 @@ namespace P03.EventLinq
                 w1.SetTemperature(550);
                 Console.WriteLine("------------West Event Finish---------------------");
             }
+            {
+                Console.WriteLine("------------Center West Event---------------------");
+                // connection between subscriber and publisher
+                c1.FireHandler += Customer.HusbandAction;
+                c1.FireHandler += Customer.WifeAction;
+                c1.FireHandler += (sender, args) =>
+                {
+                    Console.WriteLine("register event from lambda for center ");
+                    Console.WriteLine($"invoke by temperature {((FireEventArgs)args).CurrentTemperature}");
+                };
+
+                c1.BeginShowEvent += () => { Console.WriteLine("welcome to our center show!!!"); };
+                c1.ShowingEvent += () => { Console.WriteLine("this is excellent center show!!!"); };
+                c1.EndShowEvent += () => { Console.WriteLine("do you want to join our review??"); };
 
 
+                c1.Show();
+
+
+                Console.WriteLine("------------Center Event Finish---------------------");
+            }
 
         }
 
