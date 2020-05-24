@@ -69,7 +69,7 @@ namespace P03.Service
             Console.WriteLine("North test temperature");
             return temperature > this.HighTemperature;
         }
-
+        //using base class's event start method
         public override void EventStart(object send, EventArgs args)
         {
             Console.WriteLine("north event start:");

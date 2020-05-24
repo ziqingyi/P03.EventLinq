@@ -52,10 +52,7 @@ namespace P03.Service
 
 
         #region  event
-        public void FireStart(object send, EventArgs args)
-        {
 
-        }
 
 
 

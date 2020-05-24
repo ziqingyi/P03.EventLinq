@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using P03.Interface;
+using P03.Utility;
 
 namespace P03.EventLinq
 {
@@ -96,7 +98,22 @@ namespace P03.EventLinq
                 e1.SetTemperature(500);
                 Console.WriteLine("------------East Event Finish---------------------");
             }
+            {
+                Console.WriteLine("------------Show South Event---------------------");
+                // connection between subscriber and publisher
+                s1.FireHandler += (sender, args) =>
+                {
+                    Console.WriteLine("register event from lambda");
+                    Console.WriteLine($"invoke by temperature {((FireEventArgs)args).CurrentTemperature}");
+                };
+                s1.FireHandler += (sender, args) => {
+                    Console.WriteLine("Husband, Wife, Child, Dog , more people actions");
+                };
 
+                s1.SetTemperature(900);
+                Console.WriteLine("------------South Event Finish---------------------");
+
+            }
 
 
 
