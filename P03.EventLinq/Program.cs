@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using P03.Utility;
 
 namespace P03.EventLinq
 {
@@ -24,7 +25,9 @@ namespace P03.EventLinq
                     1, 3, 4, 5, 6, 7, 8, 9, 91, 44, 56, 46, 99, 190, 33, 23, 123, 12, 56
                 };
 
+                var result = list.GetRandomList(5);
 
+                var result2 = list.OrderBy(x => Guid.NewGuid()).Take(5);
 
 
             }
