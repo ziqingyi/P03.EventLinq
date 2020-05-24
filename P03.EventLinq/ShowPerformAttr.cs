@@ -12,6 +12,7 @@ namespace P03.EventLinq
     {
         public static void Show()
         {
+            #region  initialise different performer. 
             NorthPerform n1 = new NorthPerform()
             {
                 Chair = "North Chair 1",
@@ -22,6 +23,7 @@ namespace P03.EventLinq
                 Ruler = "North Ruler 1",
                 Table = "North Table 1",
             };
+            PropertyManager.ShowPropertyFields(n1);
             EastPerform e1 = new EastPerform()
             {
                 Chair = "East Chair 1",
@@ -32,8 +34,31 @@ namespace P03.EventLinq
                 Ruler = "East Ruler 1",
                 Table = "East Table 1",
             };
+            PropertyManager.ShowPropertyFields(e1);
+            SouthPerform s1 = new SouthPerform()
+            {
+                Chair = "South Chair 1",
+                Fan = "South Fan 1",
+                SouthSkillField = "South Skill Field",
+                SouthSkillProperty = "South skill Property",
+                Person = "South Person 1",
+                Ruler = "South Ruler 1",
+                Table = "South Table 1",
+            };
+            PropertyManager.ShowPropertyFields(s1);
+            WestPerform w1 = new WestPerform()
+            {
+                Chair = "West Chair 1",
+                Fan = "West Fan 1",
+                WestSkillField = "West Skill Field",
+                WestSkillProperty = "West skill Property",
+                Person = "West Person 1",
+                Ruler = "West Ruler 1",
+                Table = "West Table 1",
+            };
+            PropertyManager.ShowPropertyFields(w1);
+            #endregion
 
-            PropertyManager.ShowPropertyFields(n1);
 
             {
                 Console.WriteLine("-----------show North Performance---------------------");
