@@ -12,6 +12,11 @@ namespace P03.Service
         public string SouthSkillProperty { get; set; }
         public string SouthSkillField;
 
+        public SouthPerform()
+        {
+            this.HighTemperature = 800;
+        }
+
         //override abstract method from abstract class
 
         public override void DogCall()

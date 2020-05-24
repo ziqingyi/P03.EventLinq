@@ -16,6 +16,11 @@ namespace P03.Interface
         public string Fan { get; set; }
         public string Ruler { get; set; }
 
+        public AbstractPerform()
+        {
+            // set own event
+            this.FireHandler += EventStart;
+        }
         public void Start()
         {
             Console.WriteLine("abstract perform start method");

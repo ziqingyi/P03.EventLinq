@@ -21,8 +21,7 @@ namespace P03.Service
         {
             // set own temperature. 
             this.HighTemperature = 1000;
-            // set own event
-            this.FireHandler += EventStart;
+            
         }
 
         //override abstract method from abstract class

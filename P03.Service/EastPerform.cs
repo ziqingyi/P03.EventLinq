@@ -12,12 +12,8 @@ namespace P03.Service
     {
         public string EastSkillProperty { get; set; }
         public string EastSkillField;
+        //using temperature threshold from base class
 
-        public EastPerform()
-        {
-            this.FireHandler += EventStart;
-
-        }
         //override abstract method from abstract class
         public override void DogCall()
         {
