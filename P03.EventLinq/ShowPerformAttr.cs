@@ -112,7 +112,21 @@ namespace P03.EventLinq
 
                 s1.SetTemperature(900);
                 Console.WriteLine("------------South Event Finish---------------------");
+            }
+            {
+                Console.WriteLine("------------Show West Event---------------------");
+                // connection between subscriber and publisher
+                w1.FireHandler += (sender, args) =>
+                {
+                    Console.WriteLine("register event from lambda");
+                    Console.WriteLine($"invoke by temperature {((FireEventArgs)args).CurrentTemperature}");
+                };
+                w1.FireHandler += (sender, args) => {
+                    Console.WriteLine("Husband, Wife, Child, Dog , more people actions");
+                };
 
+                w1.SetTemperature(550);
+                Console.WriteLine("------------West Event Finish---------------------");
             }
 
 
