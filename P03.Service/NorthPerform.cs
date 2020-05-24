@@ -38,7 +38,7 @@ namespace P03.Service
         {
             Console.WriteLine("North perform wind call");
         }
-                  //only show unique skills
+                  
         protected override void ShowUniqueSkills()
         {
             NorthUniqueWay();

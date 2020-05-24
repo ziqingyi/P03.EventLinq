@@ -39,14 +39,14 @@ namespace P03.Interface
         {
             Console.WriteLine("abstract performance finished, see you...");
         }
-
+        //used for showing protected unique skills
         public void Show()
         {
             Console.WriteLine(" the exclusive skill...");
             this.ShowUniqueSkills();
             Console.WriteLine(" the exclusive skill finished...");
         }
-
+        //only show derived classes' unique skills
         protected abstract void ShowUniqueSkills();
 
         #region event
