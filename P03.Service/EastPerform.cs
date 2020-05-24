@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using P03.Interface;
+using P03.Utility;
 
 namespace P03.Service
 {
@@ -12,6 +13,11 @@ namespace P03.Service
         public string EastSkillProperty { get; set; }
         public string EastSkillField;
 
+        public EastPerform()
+        {
+            this.FireHandler += EventStart;
+
+        }
         //override abstract method from abstract class
         public override void DogCall()
         {
@@ -47,7 +53,11 @@ namespace P03.Service
 
 
 
-
+        public override void EventStart(object send, EventArgs args)
+        {
+            Console.WriteLine("East event start:");
+            base.EventStart(send,args);
+        }
 
 
 

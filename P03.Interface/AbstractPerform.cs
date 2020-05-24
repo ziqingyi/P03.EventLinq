@@ -49,6 +49,15 @@ namespace P03.Interface
         protected int HighTemperature = 400;//protected: only derived class can modify
         public event EventHandler FireHandler;
 
+        public virtual void EventStart(object send, EventArgs args)
+        {
+            var argsTemp = (FireEventArgs) args;
+            Console.WriteLine($"Send by {send.ToString()}, "+
+                              $"my temp threshold: {argsTemp.HighestTemperature}, "+
+                              $"now is : {argsTemp.CurrentTemperature} ");
+        }
+
+
         #region comparing temperature and invoke event, method 1
         public void SetTemperature(int temperature)
         {

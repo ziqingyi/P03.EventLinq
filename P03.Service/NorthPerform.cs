@@ -64,19 +64,17 @@ namespace P03.Service
          
 
         //override base class's way of comparing the temperature. 
-        //no need to set temperature in constructor. 
+        //no need to set temperature in constructor if using : return temperature > 1000. 
         protected override bool IsOn(int temperature)
         {
             Console.WriteLine("North test temperature");
             return temperature > this.HighTemperature;
         }
 
-        public void EventStart(object send, EventArgs args)
+        public override void EventStart(object send, EventArgs args)
         {
-            var argsTemp = (FireEventArgs) args;
-            Console.WriteLine($"send by {send.ToString()}  " +
-                              $"north temp threshold : {argsTemp.HighestTemperature}; " +
-                              $"now is : {argsTemp.CurrentTemperature} ");
+            Console.WriteLine("north event start:");
+            base.EventStart(send,args);
         }
 
    

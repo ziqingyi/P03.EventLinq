@@ -22,8 +22,20 @@ namespace P03.EventLinq
                 Ruler = "North Ruler 1",
                 Table = "North Table 1",
             };
+            EastPerform e1 = new EastPerform()
             {
-                PropertyManager.ShowPropertyFields(n1);
+                Chair = "East Chair 1",
+                Fan = "East Fan 1",
+                EastSkillField = "East Skill Field",
+                EastSkillProperty = "East skill Property",
+                Person = "East Person 1",
+                Ruler = "East Ruler 1",
+                Table = "East Table 1",
+            };
+
+            PropertyManager.ShowPropertyFields(n1);
+
+            {
                 Console.WriteLine("-----------show North Performance---------------------");
                 n1.Start();
                 n1.OpeningRemark();
@@ -33,11 +45,11 @@ namespace P03.EventLinq
                 n1.Show();// this will call Show method in abstract class. 
                 n1.ClosingRemark();
                 n1.Charge();
+                Console.WriteLine("-----------North Performance Finish------------------");
             }
             {
-                Console.WriteLine("------------show North Event--------------------------------------");
+                Console.WriteLine("------------Show North Event---------------------");
                 // connection between subscriber and publisher
-                Customer CusWantToSee = new Customer();
                 n1.FireHandler += Customer.HusbandAction;
                 n1.FireHandler += Customer.WifeAction;
                 n1.FireHandler += Customer.MoreChildAction;
@@ -45,10 +57,20 @@ namespace P03.EventLinq
                 n1.FireHandler += Customer.MoreDogAction;
 
                 n1.SetTemperature(1200);
-
-
+                Console.WriteLine("------------North Event Finish---------------------");
             }
+            {
+                Console.WriteLine("------------Show East Event---------------------");
+                // connection between subscriber and publisher
+                e1.FireHandler += Customer.HusbandAction;
+                e1.FireHandler += Customer.WifeAction;
+                e1.FireHandler += Customer.MoreChildAction;
+                e1.FireHandler += Customer.MorePersonAction;
+                e1.FireHandler += Customer.MoreDogAction;
 
+                e1.SetTemperature(500);
+                Console.WriteLine("------------East Event Finish---------------------");
+            }
 
 
 
