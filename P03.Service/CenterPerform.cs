@@ -47,18 +47,30 @@ namespace P03.Service
         }
 
 
-        #region  event
+        #region  show everything
 
         public event Action BeginShowEvent;
         public event Action ShowingEvent;
         public event Action EndShowEvent;
 
-        public void Show()
+        new public void Show()
         {
-
-          
+            this.Start();
+            this.OpeningRemark();
+            this.BeginShowEvent?.Invoke();
+            this.DogCall();
+            this.PeopleCry();
+            this.WindCall();
+            this.ShowUniqueSkills();
+            //show event with temperature
+            this.SetTemperature(1500);
+            //show event action
+            this.ShowingEvent?.Invoke();
+            //end
+            this.ClosingRemark();
+            this.Charge();
+            EndShowEvent?.Invoke();
         }
-
 
 
         #endregion

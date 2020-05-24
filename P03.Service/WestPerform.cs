@@ -25,7 +25,7 @@ namespace P03.Service
         {
             Console.WriteLine("West perform wind call");
         }
-        protected override void ShowSkills()
+        protected override void ShowUniqueSkills()
         {
             WestUniqueWay();
         }
