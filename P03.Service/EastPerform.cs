@@ -29,11 +29,11 @@ namespace P03.Service
             Console.WriteLine("East perform wind call");
         }
 
-        protected override void ShowSkills()
+        protected override void ShowUniqueSkills()
         {
             EastUniqueWay();
         }
-        public void EastUniqueWay()
+        private void EastUniqueWay()
         {
             Console.WriteLine("East exclusive skills .........");
         }

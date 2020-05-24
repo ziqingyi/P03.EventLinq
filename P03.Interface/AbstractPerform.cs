@@ -43,11 +43,11 @@ namespace P03.Interface
         public void Show()
         {
             Console.WriteLine(" the exclusive skill...");
-            this.ShowSkills();
+            this.ShowUniqueSkills();
             Console.WriteLine(" the exclusive skill finished...");
         }
 
-        protected abstract void ShowSkills();
+        protected abstract void ShowUniqueSkills();
 
         #region event
 

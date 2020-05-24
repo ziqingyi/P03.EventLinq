@@ -31,11 +31,11 @@ namespace P03.Service
         {
             Console.WriteLine("South perform wind call");
         }
-        protected override void ShowSkills()
+        protected override void ShowUniqueSkills()
         {
             this.SouthUniqueWay();
         }
-        public void SouthUniqueWay()
+        private void SouthUniqueWay()
         {
             Console.WriteLine("Center exclusive skills .........");
         }

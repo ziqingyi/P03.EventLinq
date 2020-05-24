@@ -29,7 +29,7 @@ namespace P03.Service
         {
             WestUniqueWay();
         }
-        public void WestUniqueWay()
+        private void WestUniqueWay()
         {
             Console.WriteLine("West exclusive skills .........");
         }

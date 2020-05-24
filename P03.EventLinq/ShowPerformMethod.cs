@@ -10,7 +10,7 @@ using P03.Utility;
 
 namespace P03.EventLinq
 {
-    public static class ShowPerformAttr
+    public static class ShowPerformMethod
     {
         public static void Show()
         {

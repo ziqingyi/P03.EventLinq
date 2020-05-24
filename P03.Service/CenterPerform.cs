@@ -29,12 +29,12 @@ namespace P03.Service
         {
             Console.WriteLine("center perform wind call");
         }
-        protected override void ShowSkills()
+        protected override void ShowUniqueSkills()
         {
             CenterUniqueWay();
         }
 
-        public void CenterUniqueWay()
+        private void CenterUniqueWay()
         {
             Console.WriteLine("Center exclusive skills .........");
         }
@@ -55,6 +55,7 @@ namespace P03.Service
 
         public void Show()
         {
+
           
         }
 

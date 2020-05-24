@@ -38,11 +38,12 @@ namespace P03.Service
         {
             Console.WriteLine("North perform wind call");
         }
-        protected override void ShowSkills()
+                  //only show unique skills
+        protected override void ShowUniqueSkills()
         {
             NorthUniqueWay();
         }
-        public void NorthUniqueWay()
+        private void NorthUniqueWay()
         {
             Console.WriteLine("North exclusive skills .........");
         }
