@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LinqCollectionExtension.cs" />
     <Compile Include="LinqExtension.cs" />
     <Compile Include="Model\FireEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

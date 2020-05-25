@@ -26,9 +26,18 @@ namespace P03.EventLinq
                 };
 
                 var result = list.GetRandomList(5);
+                foreach (var item in result)
+                {
+                    Console.WriteLine(item);
+                }
+
+                Console.WriteLine("order by ----");
 
                 var result2 = list.OrderBy(x => Guid.NewGuid()).Take(5);
-
+                foreach (var item in result2)
+                {
+                    Console.WriteLine(item);
+                }
 
             }
         }

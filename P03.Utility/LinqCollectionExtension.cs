@@ -6,49 +6,52 @@ using System.Threading.Tasks;
 
 namespace P03.Utility
 {
-    public static class LinqExtension
+    public static class LinqCollectionExtension
     {
-        // this only apply on list, not for all collection
-        public static List<T> GetRandomList<T>(this List<T> t, int length)
+        public static IEnumerable<T> GetRandomList<T>(this IEnumerable<T> t, int length)
         {
+
             if (t == null || !t.Any())
             {
                 return null;
             }
 
-            var totalCount = t.Count;
+            var totalCount = t.Count();
             if (totalCount < length)
             {
                 return t;
             }
 
             return GetRandomListCore(t, length);
+
+
         }
 
-        private static List<T> GetRandomListCore<T>(this List<T> tList, int length)
+        private static IEnumerable<T> GetRandomListCore<T>(this IEnumerable<T> t, int length)
         {
-            List<int> randomList = GetRandomList4Int(length, tList.Count);
+            List<int> randomList = GetRandomList4Int(length, t.Count());
 
             List<T> result = new List<T>();
-            for (int i = 0; i < tList.Count; i++)
+
+            for (int i = 0; i < t.Count(); i++)
             {
                 if (!randomList.Contains(i))
                 {
                     continue;
                 }
-                result.Add(tList[i]);
+                result.Add(t.ElementAt(i));
             }
             return result;
         }
 
-        private static List<int> GetRandomList4Int(int length, int maxValue)
+        private static List<int> GetRandomList4Int(int lenght, int maxValue)
         {
             Random rd = new Random();
             List<int> randomList = new List<int>();
 
             while (true)
             {
-                if (randomList.Count >= length)
+                if (randomList.Count >= lenght)
                 {
                     break;
                 }
@@ -63,5 +66,8 @@ namespace P03.Utility
             }
             return randomList;
         }
+
+
+
     }
 }
