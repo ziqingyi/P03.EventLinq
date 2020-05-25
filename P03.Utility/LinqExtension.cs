@@ -30,14 +30,21 @@ namespace P03.Utility
             List<int> randomList = GetRandomList4Int(length, tList.Count);
 
             List<T> result = new List<T>();
-            for (int i = 0; i < tList.Count; i++)
+            //for (int i = 0; i < tList.Count; i++)
+            //{
+            //    if (!randomList.Contains(i))
+            //    {
+            //        continue;
+            //    }
+            //    result.Add(tList[i]);
+            //}
+
+            foreach (int i in randomList)
             {
-                if (!randomList.Contains(i))
-                {
-                    continue;
-                }
                 result.Add(tList[i]);
             }
+
+
             return result;
         }
 

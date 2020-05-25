@@ -8,7 +8,7 @@ namespace P03.Utility
 {
     public static class LinqCollectionExtension
     {
-        public static IEnumerable<T> GetRandomList<T>(this IEnumerable<T> t, int length)
+        public static IEnumerable<T> GetRandomInCollection<T>(this IEnumerable<T> t, int length)
         {
 
             if (t == null || !t.Any())
@@ -33,12 +33,8 @@ namespace P03.Utility
 
             List<T> result = new List<T>();
 
-            for (int i = 0; i < t.Count(); i++)
+            foreach (int i in randomList)
             {
-                if (!randomList.Contains(i))
-                {
-                    continue;
-                }
                 result.Add(t.ElementAt(i));
             }
             return result;
