@@ -63,6 +63,7 @@ namespace P03.Utility
                 var randomIndex = rd.Next(maxValue);
                 if (randomList.Contains(randomIndex))
                 {
+                    //how to define same? can use delegate to compare same or diff. eg.same id
                     continue;
                 }
 
